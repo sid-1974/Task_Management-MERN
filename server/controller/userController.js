@@ -57,6 +57,10 @@ export const register = catchAsyncErrors(async (req, res, next) => {
   //   success:true,
   //   message:"User Registered",
   // })
+  // res.status(200).json({
+  //   success:true,
+  //   message:"User Registered",
+  // })
 });
 
 export const login = catchAsyncErrors(async (req, res, next) => {
