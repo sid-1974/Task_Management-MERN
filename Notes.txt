@@ -1,0 +1,24 @@
+1.npm init
+2.npm install dependencies 
+ -bcrypt: it is used for hashing passwords securely. It helps protect user passwords by transforming them into a fixed-length string that cannot be easily reversed, making it difficult for attackers to retrieve the original password if the hashed value is compromised.
+
+-cloudinary : for storing images
+
+-cookie-parser :it is a middleware for Express.js that simplifies handling cookies in Node.js applications. It allows you to easily parse cookies attached to the client’s request object and set cookies in the response.
+
+-cors : connection btw frontend n backend.
+
+-dotenv :to storing secrete variables.
+
+-express :node js frame work.
+
+-express-fileupload - files uploading make easy.
+
+-jsonwebtoken :jwt token generator for user register n login
+
+-mangoose : database for mongodb.
+
+-validator: use for email validation.
+
+
+
