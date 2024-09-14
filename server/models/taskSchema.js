@@ -10,13 +10,14 @@ const taskschema =  new mongoose.Schema({
     },
     status:{
         type:String,
-        enum:["completed","incomplete"]
+        enum:["completed","incomplete"],
+        default:"incomplete"
     },
     archived:{
         type:Boolean,
         default:false
     },
-    createBy:{
+    createdBy:{
         type:mongoose.Schema.ObjectId,
         required:true
     },
