@@ -1,0 +1,99 @@
+/* NavStyles.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa66; /* Light background color */
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #000; /* Dark text color */
+    margin-right: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .profile{
+    text-decoration: none;
+    color: #000; /* Dark text color */
+    margin-left: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .profile:hover{
+    color: #007bff;
+  }
+  
+  .link:hover {
+    color: #007bff; /* Blue color on hover */
+  }
+  
+  .nav-dropdown {
+    position: relative;
+  }
+  
+  .nav-dropdown-title {
+    cursor: pointer;
+    color: #000;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-dropdown-title:hover {
+    color: #007bff; /* Blue color on hover */
+  }
+  
+  .nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 100;
+  }
+  
+  .nav-dropdown-item {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .logout-button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: #000000; /* White text */
+    padding: 0.5rem 1rem; /* Adds space around the text */
+    font-size: 1rem; /* Font size adjustment */
+    cursor: pointer; /* Makes the button clickable */
+    width: fit-content; /* Ensures button width adjusts to the text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+    margin-left: 1rem; /* Adjusts the gap */
+}
+
+/* Hover effect */
+.logout-button:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #fff; /* Keep white text on hover */
+    border-radius: 4px; /* Slight rounding for a smooth effect */
+}
+  
+  /* @media (max-width: 768px) {
+    .link {
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .nav-dropdown-menu {
+      width: 100%;
+    }
+  } */
+  
