@@ -62,11 +62,11 @@ function Header({setTasks,tasks,setIsAuthenticated,isAuthenticated,setTaskTitle}
          break;
       case "incomplete":
         filteredTasks = allTasks.filter((task) => task.status === "incomplete");
-        setTaskTitle("Incomplete Tasks");
+        setTaskTitle("To Do Tasks");
         break;
        case "archived":
          filteredTasks = allTasks.filter((task) => task.archived === true);
-         setTaskTitle("Archived Tasks");
+         setTaskTitle("Progress Tasks");
         break;
        case "all":
          filteredTasks = allTasks;
@@ -95,8 +95,8 @@ function Header({setTasks,tasks,setIsAuthenticated,isAuthenticated,setTaskTitle}
       <NavDropdown title="Filter Tasks" id="basic-nav-dropdown" className="nav-dropdown">
         <NavDropdown.Item onClick={() => filterTasks("all")} className="nav-dropdown-item">All Tasks</NavDropdown.Item>
         <NavDropdown.Item onClick={() => filterTasks("completed")} className="nav-dropdown-item">Completed Tasks</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => filterTasks("incomplete")} className="nav-dropdown-item">Incomplete Tasks</NavDropdown.Item>
-        <NavDropdown.Item onClick={() => filterTasks("archived")} className="nav-dropdown-item">Archived Tasks</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => filterTasks("incomplete")} className="nav-dropdown-item">To Do Tasks</NavDropdown.Item>
+        <NavDropdown.Item onClick={() => filterTasks("archived")} className="nav-dropdown-item">Progress Tasks</NavDropdown.Item>
       </NavDropdown>
       <Link to="/profile" className="profile">Profile</Link>
       <Button className='logout-button' onClick={handleLogout}>Logout</Button>
