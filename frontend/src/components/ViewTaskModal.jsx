@@ -27,16 +27,16 @@ const ViewTaskModal = ({ showViewModal, handleViewModalClose, id }) => {
     <>
       <Modal show={showViewModal} onHide={handleViewModalClose}>
         <Modal.Header closeButton>
-          <Modal.Title>View Task</Modal.Title>
+          <Modal.Title className="text-dark">View Task</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Stack>
-            <p className="fw-bold mb-0">Title</p>
-            <p>{task && task.title}</p>
+            <p className="fw-bold mb-0 text-dark">Title</p>
+            <p className="text-dark">{task && task.title}</p>
           </Stack>
           <Stack>
-            <p className="fw-bold mb-0">Description</p>
-            <p>{task && task.description}</p>
+            <p className="fw-bold mb-0 text-dark">Description</p>
+            <p className="text-dark">{task && task.description}</p>
           </Stack>
         </Modal.Body>
         <Modal.Footer>

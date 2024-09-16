@@ -13,6 +13,7 @@ const UpdateTaskModal = ({
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("incomplete");
   const [archived, setArchived] = useState(false);
+  
 
   useEffect(() => {
     const getSingleTask = async () => {
@@ -79,11 +80,11 @@ const UpdateTaskModal = ({
     <>
       <Modal show={showUpdateModal} onHide={handleUpdateModalClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Update Task</Modal.Title>
+          <Modal.Title className="text-dark">Update Task</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Stack gap={2}>
-            <label>Title</label>
+            <label className="text-dark">Title</label>
             <input
               type="text"
               placeholder="Title"
@@ -93,7 +94,7 @@ const UpdateTaskModal = ({
           </Stack>
           <br />
           <Stack gap={2}>
-            <label>Description</label>
+            <label className="text-dark">Description</label>
             <input
               type="text"
               placeholder="Description"
@@ -103,15 +104,15 @@ const UpdateTaskModal = ({
           </Stack>
           <br />
           <Stack gap={2}>
-            <label>Status</label>
+            <label className="text-dark">Status</label>
             <select value={status} onChange={(e) => setStatus(e.target.value)}>
-              <option value="completed">COMPLETED</option>
-              <option value="incomplete">INCOMPLETE</option>
+              <option value="completed">DONE.</option>
+              <option value="incomplete">TO DO</option>
             </select>
           </Stack>
           <br />
           <Stack gap={2}>
-            <label>Archived</label>
+            <label className="text-dark">IN PROGRESS</label>
             <select
               value={archived}
               onChange={(e) => setArchived(e.target.value)}
@@ -125,7 +126,10 @@ const UpdateTaskModal = ({
           <Button variant="secondary" onClick={handleUpdateModalClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleUpdateTask}>
+          <Button variant="primary" onClick={()=>{
+            handleUpdateTask();
+            window.location.reload();
+          }}>
             Update
           </Button>
         </Modal.Footer>

@@ -13,7 +13,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [user, setUser] = useState([]);
-  const [TaskTitle,setTaskTitle] = useState("Tasks")
+  const [taskTitle,setTaskTitle] = useState("Tasks")
 
   useEffect(() => {
     const handleGetUser = async () => {
@@ -41,11 +41,11 @@ function App() {
         setIsAuthenticated={setIsAuthenticated}
         isAuthenticated={isAuthenticated}
         setTaskTitle={setTaskTitle}
-        TaskTitle={TaskTitle}
+        TaskTitle={taskTitle}
 
       />
       <Routes>
-        <Route path="/" element={<Home isAuthenticated={isAuthenticated} tasks={tasks} setTasks={setTasks} />} />
+        <Route path="/" element={<Home isAuthenticated={isAuthenticated} tasks={tasks} setTasks={setTasks} taskTitle={taskTitle}  />} />
         <Route path="/login" element={<Login isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/register" element={<Register isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/profile" element={<Profile user={user} isAuthenticated={isAuthenticated}/>} />

@@ -9,12 +9,14 @@ import { FaEye } from "react-icons/fa";
 import { MdEdit, MdDelete } from "react-icons/md";
 import { Navigate } from "react-router-dom";
 
+
 const Home = ({ isAuthenticated, tasks, setTasks, taskTitle }) => {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showViewModal, setShowViewModal] = useState(false);
   const [viewTaskId, setViewTaskId] = useState(null);
   const [updatedTaskId, setUpdateTaskId] = useState(null);
+
 
   const deleteTask = async (id) => {
     await axios
@@ -90,7 +92,14 @@ const Home = ({ isAuthenticated, tasks, setTasks, taskTitle }) => {
                       className="fs-3 "
                     />
                     <MdDelete
-                      onClick={() => deleteTask(task._id)}
+                      onClick={() => {
+                        const confirmDelete = window.confirm(
+                          "Are you sure you want to delete this task?"
+                        );
+                        if (confirmDelete) {
+                          deleteTask(task._id);
+                        }
+                      }}
                       className="fs-3 "
                     />
                     <FaEye
